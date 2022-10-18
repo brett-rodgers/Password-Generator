@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+/*Colors*/
+:root {
+  --bg-color1: #1b1b1e;
+  --bg-color2: #6d8e1f;
+  --bg-color3: #17171a;
+  --bg-color4: #090909;
+  --bg-color5: #fff;
+  --bg-color6: #7fa724;
+  --bg-color7: #455e0d;
+}
+
+/*!Outline*/
+*::selection {
+  background: var(--bg-color3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-color1);
+  color: var(--bg-color5);
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  padding-top: 5rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--bg-color5);
+}
+
+#copyToClipboard {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color2);
+  opacity: 0;
+}
+
+.popUp {
+  animation: popUp 3s ease-in-out 1;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*!1st Section*/
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+
+h1 span {
+  color: var(--bg-color6);
+}
+
+h2 {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+/*!2nd Section*/
+section:nth-of-type(2) {
+  margin-bottom: 2.5rem;
+}
+
+section:nth-of-type(2) button {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  background: var(--bg-color2);
+  color: var(--bg-color5);
+}
+
+button:hover,
+section:nth-of-type(4) > div:hover {
+  cursor: pointer;
+}
+
+/*!3rd Section*/
+section:nth-of-type(3) > div {
+  margin-bottom: 0.5rem;
+  grid-gap: 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--bg-color2);
+  transform: scale(1.7);
+  margin-left: 0.3rem;
+}
+
+section:nth-of-type(3) button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color2);
+  border-radius: 0.3rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  font-weight: 700;
+  color: var(--bg-color5);
+  transform: scale(1);
+  border: none;
+}
+
+section:nth-of-type(3) button:hover,
+section:nth-of-type(3) button:active section:nth-of-type(3) button:focus {
+  background: var(--bg-color7);
+}
+
+section:nth-of-type(3) .passwordLengthDiv {
+  margin-bottom: 0.6rem;
+}
+
+input[type="number"] {
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:hover::-webkit-inner-spin-button,
+input[type="number"]:hover::-webkit-outer-spin-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/*!4th Section*/
+section:nth-of-type(4) {
+  display: flex;
+  flex-flow: row wrap;
+  grid-gap: 0.5rem;
+}
+
+section:nth-of-type(4) div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.3rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0 2rem;
+  overflow-x: hidden;
+  background: var(--bg-color3);
+}
+
+/*!Footer*/
+footer {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.6rem;
+  background: var(--bg-color4);
+  color: var(--bg-color5);
+}
+
+/*?Media Queries*/
+@media screen and (min-width: 370px) {
+  /*?1st section*/
+  main {
+    padding: 5rem 3rem 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+  }
+
+  /*?2nd section*/
+  section:nth-of-type(2) {
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  /*?1st section*/
+  main {
+    padding: 5rem 3rem 0;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  /*?2nd section*/
+  section:nth-of-type(2) {
+    margin-bottom: 5rem;
+  }
+
+  section:nth-of-type(2) > button {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*?2nd section*/
+  section:nth-of-type(2) {
+    width: 91%;
+  }
+
+  /*?4th section*/
+
+  section:nth-of-type(4) > div {
+    width: 45%;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="index.css"> 
+  </head>
+
+<body>
+  <div id="copyToClipboard">Copied to clipboard!</div>
+  
+  <main>
+    <section>
+      <h1>Generate a<br><span>random password</span></h1>
+      <h2>Create strong and secure passwords to keep your account safe online.</h2>
+    </section>
+    <section>
+      <button >Generate Password</button>
+    </section>
+    <section>
+      <div class="passwordLengthDiv">
+        <label>Password length</label>
+        <button id="addBtn" >+</button>
+        <input onkeypress="return false" id="passwordLength" type="number" name="passwordLength" value="8" min="8" max="30" step="1">         
+        <button id="subsBtn" >-</button>
+      </div>
+      <div>
+        <label for="passwordLowercase">Lowercase characters</label>
+        <input checked type="checkbox" id="passwordLowercase" name="passwordLowercase">
+      </div>
+      <div>
+        <label for="passwordUppercase">Uppercase characters</label>
+        <input checked type="checkbox" id="passwordUppercase" name="passwordUppercase">
+      </div>
+      <div>
+        <label for="passwordSymbols">Symbols</label>
+        <input checked type="checkbox" id="passwordSymbols" name="passwordSymbols">
+      </div>
+      <div>
+        <label for="passwordNumbers">Numbers</label>
+        <input checked type="checkbox" id="passwordNumbers" name="passwordNumbers">
+      </div>
+    </section>
+    <section>
+      <div>
+        <p class="randomPassword"></p>
+      </div>
+      <div>
+        <p class="randomPassword"></p>
+      </div>
+      <div>
+        <p class="randomPassword"></p>
+      </div>
+      <div>
+        <p class="randomPassword"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by <a href="https://github.com/brett-rodgers">Brett Rodgers</a></p>
+    <p>Website created through the JavaScript Course provided by <a href="https://scrimba.com/">Scrimba</a></p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
